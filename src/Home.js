@@ -7,29 +7,28 @@ export default function Home() {
 
 
     return (
-        <div class="contenedor">
+        <div class="container">
             <div className="row">
                 {
                     personitas.map((personita) =>
-                        <div className="col-md-3 mb-3">
                             <Link to={`/persona/${personita.id}`}>
                                 <button class="button">
                                     {personita.nombre}
                                 </button>
                             </Link>
-                        </div>
                     )
                 }
-                <button class="button special-button">Estadisticas
+                <button class="button special-button">
                     <Link to="/estadisticas">
+                    Estadisticas
                     </Link>
                 </button>
-                <button class="button special-button">Contacto
+                <button class="button special-button">
                     <Link to="/contacto">
+                    Contacto
                     </Link>
                 </button>
-            </div>
-
+                </div>
         </div>
     )
 

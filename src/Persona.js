@@ -9,9 +9,19 @@ export default function Persona(){
     console.log(personaId)
  return (
    <div>
-        
+
       {`ID: ${personaId}`}
+      <br></br>
       {`nombre: ${persona.nombre}`}
+      <br></br>
+
+      {`apellido: ${persona.apellido}`}
+      <br></br>
+
+      {`edad: ${persona.edad}`}
+      <br></br>
+
+      {`email: ${persona.email}`}
    </div>
  )
 
