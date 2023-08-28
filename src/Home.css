@@ -1,6 +1,6 @@
 .button {
     --bg: #000;
-    --hover-bg: #ff90e8;
+    --hover-bg: rgb(255, 144, 232);
     --hover-text: #000;
     color: #fff;
     width: 200px;
