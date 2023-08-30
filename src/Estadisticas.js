@@ -1,58 +1,31 @@
 import personitas from "./Personas.json";
-import { useState } from "react";
 
-export default function Estadisticas() {
+const Estadisticas = () => {
+    
+    const result = personitas.filter((p) => parseInt(p.edad) > 35);
 
-    const [mayorEdad, setMayorEdad] = useState(0);
-    const [mayores35, setMayores35] = useState(0);
-    const [personaMayorEdad, setPersonaMayorEdad] = useState([]);
-    const [menorEdad, setMenorEdad] = useState(99999);
-    const [personaMenorEdad, setPersonaMenorEdad] = useState([]);
-
-    personitas.map((p) => {
-
-        if (p.edad > 35) {
-            setMayores35(mayores35 + 1)
-        }
-
-        if (p.edad > mayorEdad) {
-            setMayorEdad(p.edad)
-
-        }
-
-        if (p.edad < menorEdad) {
-            setMenorEdad(p.edad)
-        }
-
-        {
-            personitas.map((p) => {
-                if (p.edad = mayorEdad) {
-                    setPersonaMayorEdad(personaMayorEdad => [...personaMayorEdad, p.nombre]);
-                }
-                if (p.edad = menorEdad) {
-                    setPersonaMenorEdad(personaMenorEdad => [...personaMenorEdad, p.nombre]);
-                }
-            })
-        }
-
-    })
+    const mayorEdad = personitas.reduce((max , p) => Math.max( max, parseInt(p.edad)), -Infinity)
+    const menorEdad = personitas.reduce((min , p) => Math.min( min, parseInt(p.edad)), Infinity)
+    console.log(mayorEdad, " ",menorEdad)
+    const personasMayorEdad = personitas.filter((p) => parseInt(p.edad) === mayorEdad)
+    const personasMenorEdad = personitas.filter((p) => parseInt(p.edad) === menorEdad)
 
 
     return (
-        <>
-        <div><p>
-            mayores de 35: {mayores35}
-            <br></br>
+            <div><p>
+                mayores de 35: {result.length}
+                <br></br>
 
-            las personas de mayor edad son: {personaMayorEdad}
+                las personas de mayor edad son: {personasMayorEdad}
 
-            <br></br>
+                <br></br>
 
-            las personas de menor edad son: {personaMenorEdad}
+                las personas de menor edad son: {personasMenorEdad}
 
-        </p>
-        </div >
-        </>
+            </p>
+            </div >
     )
 
 }
+
+export default Estadisticas;

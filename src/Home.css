@@ -1,6 +1,6 @@
 .button {
     --bg: #000;
-    --hover-bg: rgb(255, 144, 232);
+    --hover-bg: #ecb7e2;
     --hover-text: #000;
     color: #fff;
     width: 200px;
@@ -27,15 +27,6 @@
     transform: translate(0);
     box-shadow: none;
   }
-
-  .special-button{
-    
-    --bg: #ff90e8;
-    --hover-bg: #000;
-    --hover-text: #ff90e8;
-    color: #fff;
-  }
-
   .container{
     display: flex;
     justify-content: center;

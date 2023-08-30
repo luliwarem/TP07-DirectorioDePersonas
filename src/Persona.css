@@ -15,10 +15,10 @@
 .card {
     height: 100%;
     border-radius: 50px;
-    background: linear-gradient(135deg, #ff90e8 0%, #ff90e8 100%);
+    background: linear-gradient(135deg, #ecb7e2 0%, #ecb7e2 100%);
     transition: all 0.5s ease-in-out;
     transform-style: preserve-3d;
-    box-shadow: rgba(5, 71, 17, 0) 40px 50px 25px -40px, rgba(5, 71, 17, 0.2) 0px 25px 25px -5px;
+    box-shadow: rgba(5, 71, 17, 0) 40px 50px 25px -40px, rgba(71, 5, 68, 0.2) 0px 25px 25px -5px;
 }
 
 .glass {
