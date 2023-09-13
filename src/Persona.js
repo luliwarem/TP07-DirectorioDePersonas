@@ -1,9 +1,11 @@
 import { useParams } from "react-router-dom";
-import personitas from "./Personas.json"
+import {useContext} from "react"
+import { MyContext } from "./MyContext";
 import "./Persona.css"
 
 export default function Persona(){
     const { personaId } = useParams();
+    const {personitas, setPersonitas}=useContext(MyContext);
 
     const persona = personitas.find((personitas)=> personaId === personitas.id )
 

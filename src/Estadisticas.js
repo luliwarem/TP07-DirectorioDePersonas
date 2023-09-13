@@ -1,8 +1,11 @@
-import { useState, useEffect } from "react";
-import personitas from "./Personas.json";
+
+import {useContext} from "react"
+import { MyContext } from "./MyContext";
 import "./Estadisticas.css"
 
 const Estadisticas = () => {
+    const {personitas, setPersonitas}=useContext(MyContext);
+
     const result = personitas.filter((p) => parseInt(p.edad) > 35);
 
     const mayorEdad = personitas.reduce((prev, current) => {
